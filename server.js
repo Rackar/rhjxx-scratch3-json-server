@@ -17,14 +17,38 @@ server.get('/echo', (req, res) => {
 server.use(jsonServer.bodyParser)
 server.use((req, res, next) => {
   if (req.method === 'POST') {
-    console.log(req.body)
-    //req.body.createdAt = Date.now()
+
+    //----------------------------写入文件的代码-------------------------------------------
+    //把base64数据写入文件：https://cloud.tencent.com/developer/ask/61089
+    let base64Data = req.body.fileData.replace("data:application/x.scratch.sb3;base64,", "");
+    let binaryData = new Buffer.from(base64Data, 'base64').toString('binary');
+
+    let fileFullPath = 'sb3Files/';
+    fileFullPath += req.body.fileInfo[0] + '/' //年级id
+                    + req.body.fileInfo[1] + '/' //课题id
+                    + req.body.fileInfo[2] + '/' //班级id
+                    + req.body.fileInfo[3] + '.sb3' //学生id.sb3
+    /* 没有使用req.body.fileName（Scratch3文件名框中输入的文件名）因为可以是汉字等不易于保存的字符
+    后期可以用于向数据库中保存文件信息。 */
+
+    fs.outputFile(fileFullPath, binaryData, 'binary', err=>{
+        if(err){
+            console.log(err);
+        }
+        console.log('TODO:写入文件后测试写入是否成功，并向前端返回结果');
+    })
+    //----------------------------写入文件的代码完了-------------------------------------------
+
+    //不需要把base64文件数据存入数据库
+    req.body.fileData = null;
+    req.body.fileFullPath = fileFullPath;
   }
   if (req.method === 'GET') {
     
    // req.body.createdAt = Date.now()
   }
   // Continue to JSON Server router 
+
   next()
 })
 
