@@ -24,10 +24,12 @@ server.use((req, res, next) => {
     let binaryData = new Buffer.from(base64Data, 'base64').toString('binary');
 
     let fileFullPath = 'sb3Files/';
-    fileFullPath += req.body.fileInfo[0] + '/' //年级id
-                    + req.body.fileInfo[1] + '/' //课题id
-                    + req.body.fileInfo[2] + '/' //班级id
-                    + req.body.fileInfo[3] + '.sb3' //学生id.sb3
+    
+    let fileInfo = req.body.fileInfo;
+    fileFullPath += fileInfo.gradeId + '/'
+                  + fileInfo.courseId + '/'
+                  + fileInfo.classId + '/'
+                  + fileInfo.studentId + '.sb3';
     /* 没有使用req.body.fileName（Scratch3文件名框中输入的文件名）因为可以是汉字等不易于保存的字符
     后期可以用于向数据库中保存文件信息。 */
 
