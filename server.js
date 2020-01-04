@@ -16,7 +16,7 @@ server.get('/echo', (req, res) => {
 // You can use the one used by JSON Server
 server.use(jsonServer.bodyParser)
 server.use((req, res, next) => {
-  if (req.method === 'POST') {
+  if (req.method === 'POST' && req.url === '/scratch-file') {
 
     //----------------------------写入文件的代码-------------------------------------------
     //把base64数据写入文件：https://cloud.tencent.com/developer/ask/61089
