@@ -97,13 +97,10 @@
   "scratch-file": [
     {
       "fileName": "神奇的宝石-赵一.sb3",
-      "fileInfo": {
-        "gradeId": "2016",
-        "courseId": "201601",
-        "classId": "201601",
-        "studentId": "20160101"
-      },
-      "fileData": null,
+      "gradeNum": "2016",
+      "classNum": "201601",
+      "courseNum": "201601",
+      "studentNum": "20160101",
       "fileFullPath": "sb3Files/2016/201601/201601/20160101.sb3",
       "id": 1
     }

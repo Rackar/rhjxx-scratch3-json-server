@@ -25,11 +25,12 @@ server.use((req, res, next) => {
 
     let fileFullPath = 'sb3Files/';
     
-    let fileInfo = req.body.fileInfo;
-    fileFullPath += fileInfo.gradeId + '/'
-                  + fileInfo.courseId + '/'
-                  + fileInfo.classId + '/'
-                  + fileInfo.studentId + '.sb3';
+    //TODO:如果该同学已经提交过这一课，那么应该覆盖还是新建一个文件？
+    //保存的文件路径：年级/班级/课题/学生
+    fileFullPath += req.body.gradeNum + '/'
+                  + req.body.classNum + '/'
+                  + req.body.courseNum + '/' 
+                  + req.body.studentNum + '.sb3';
     /* 没有使用req.body.fileName（Scratch3文件名框中输入的文件名）因为可以是汉字等不易于保存的字符
     后期可以用于向数据库中保存文件信息。 */
 
@@ -41,8 +42,9 @@ server.use((req, res, next) => {
     })
     //----------------------------写入文件的代码完了-------------------------------------------
 
-    //不需要把base64文件数据存入数据库
-    req.body.fileData = null;
+    //不需要把base64文件数据存入数据库，所以删除掉这一项
+    delete req.body.fileData;
+    //req.body.fileData = null;
     req.body.fileFullPath = fileFullPath;
   }
   if (req.method === 'GET') {
