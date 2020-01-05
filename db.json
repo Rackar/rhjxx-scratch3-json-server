@@ -1,17 +1,17 @@
 {
   "grades": [
     {
-      "gradeNum": "2016",
+      "gradeNum": 2016,
       "gradeName": "2016级",
       "id": 1
     },
     {
-      "gradeNum": "2015",
+      "gradeNum": 2015,
       "gradeName": "2015级",
       "id": 2
     },
     {
-      "gradeNum": "2014",
+      "gradeNum": 2014,
       "gradeName": "2014级",
       "id": 3
     }
