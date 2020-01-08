@@ -18,89 +18,89 @@
   ],
   "classes": [
     {
-      "classNum": "201601",
+      "classNum": 201601,
       "className": "1班",
-      "gradeId": "2016",
+      "gradeNum": 2016,
       "id": 1
     },
     {
-      "classNum": "201602",
+      "classNum": 201602,
       "className": "2班",
-      "gradeId": "2016",
+      "gradeNum": 2016,
       "id": 2
     },
     {
-      "classNum": "201503",
+      "classNum": 201503,
       "className": "3班",
-      "gradeId": "2015",
+      "gradeNum": 2015,
       "id": 3
     },
     {
-      "classNum": "201504",
+      "classNum": 201504,
       "className": "4班",
-      "gradeId": "2015",
+      "gradeNum": 2015,
       "id": 4
     },
     {
-      "classNum": "201405",
+      "classNum": 201405,
       "className": "5班",
-      "gradeId": "2014",
+      "gradeNum": 2014,
       "id": 5
     },
     {
-      "classNum": "201406",
+      "classNum": 201406,
       "className": "6班",
-      "gradeId": "2014",
+      "gradeNum": 2014,
       "id": 6
     }
   ],
   "students": [
     {
-      "studentNum": "20160101",
+      "studentNum": 20160101,
       "studentName": "赵一",
-      "classId": "201601",
+      "classNum": 201601,
       "id": 1
     },
     {
-      "studentNum": "20160102",
+      "studentNum": 20160102,
       "studentName": "钱二",
-      "classId": "201601",
+      "classNum": 201601,
       "id": 2
     },
     {
-      "studentNum": "20160201",
+      "studentNum": 20160201,
       "studentName": "孙三",
-      "classId": "201602",
+      "classNum": 201602,
       "id": 3
     },
     {
-      "studentNum": "20160202",
+      "studentNum": 20160202,
       "studentName": "李四",
-      "classId": "201602",
+      "classNum": 201602,
       "id": 4
     }
   ],
   "courses": [
     {
-      "courseNum": "201601",
+      "courseNum": 201601,
       "courseName": "神奇的宝石",
-      "gradeId": "2016",
+      "gradeNum": 2016,
       "id": 1
     },
     {
-      "courseNum": "201602",
+      "courseNum": 201602,
       "courseName": "比福牛肉馆",
-      "gradeId": "2016",
+      "gradeNum": 2016,
       "id": 2
     }
   ],
   "scratch-file": [
     {
       "fileName": "神奇的宝石-赵一.sb3",
-      "gradeNum": "2016",
-      "classNum": "201601",
-      "courseNum": "201601",
-      "studentNum": "20160101",
+      "gradeNum": 2016,
+      "classNum": 201601,
+      "courseNum": 201601,
+      "studentNum": 20160101,
       "fileFullPath": "sb3Files/2016/201601/201601/20160101.sb3",
       "id": 1
     }
